@@ -1,5 +1,5 @@
 body {
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -46,7 +46,7 @@ section {
 }
 
 .logo {
-    height: 80px;
+    height: 45px;
     margin: 30px;
 }
 
@@ -56,18 +56,21 @@ nav {
     display: flex;
     justify-content: space-between;
 }
-ul {
+.nav-list {
     display: flex;
     list-style-type: none;
     width: 500px;
     justify-content: space-around;
     padding: 10px;
 }
-li {
+.nav-item {
     text-decoration: none;
 }
 a.nav-link {
     font-size: 25px;
+}
+a.nav-link:hover {
+    color: #ada4c0;
 }
 
 
@@ -77,6 +80,13 @@ a.nav-link {
 }
 .social-link {
     margin: 20px;
+    fill: #ffffff
+}
+.social-link:hover {
+    fill: #ada4c0;
+}
+.social-link:active {
+    fill: #68588a;
 }
 
 
@@ -85,6 +95,17 @@ a.nav-link {
     display: flex;
     justify-content: space-between;
     padding: 60px;
+}
+
+.about-container {
+    display: flex;
+}
+
+.about-info-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
 }
 
 .about-photo {
@@ -147,6 +168,12 @@ a.nav-link {
     text-decoration: none;
     color: white;
 }
+.project-card-link:hover {
+    color: #ada4c0;
+}
+.project-card-link:active {
+    color: #68588a;
+}
 
 
 /*********FOOTER STYLING**********/
@@ -187,13 +214,16 @@ a {
 }
 
 
-/**********HAMBURGER STYLING**************/
+/**********HAMBURGER STYLING*************/
 .hamburger {
     display: none;
 }
 .hamburger:focus {
     outline: 0;
 }
+
+
+
 @media only screen and (max-width: 1000px) {
     .hamburger {
         display: block;
@@ -204,15 +234,18 @@ a {
         align-self: flex-end;
     }
 
-    ul {
+    .nav-list {
         display: none;
-        background-color: #241f2f;
+        list-style: none;
+        background-color: #181422;
         margin-top: 0;
+        margin-left: 20px;
         /* margin: 0; */
     }
 
-    ul.show {
-        display: inline-block;
+    .nav-list.show {
+        display: flex;
+        justify-content: space-around;
     }
 
     a.nav-link {
@@ -222,10 +255,11 @@ a {
     nav {
         display: flex;
         flex-direction: column-reverse;
-        background-color: #241f2f;
+        background-color: #181422;
     }
 
     .logo {
         display: none;
     }
 }
+
